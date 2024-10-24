@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image {
+    height: 157px;
+    width: 560px;
+    position: relative; 
+}
+
+.boat-icon {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 50%; 
+    left: -150; 
+    transform: translateY(-50%);
+	z-index: 2;
+}
+
+.wave-icon {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: -150;
+    transform: translateY(-50%);
+}
+
+.dots-container {
+    position: absolute;
+    top: 50%;
+    left:-7%;
+    transform: translateY(-50%);
+}
+
+.dot {
+    font-size: 30px;
+    color: red;
+    position: absolute;
+	z-index: 1;
+}
+
+/* Dot들의 위치를 고정된 값으로 설정 */
+#dot-1 { left: 10px; }
+#dot-2 { left: 40px; }
+#dot-3 { left: 70px; }
+#dot-4 { left: 100px; }
+#dot-5 { left: 130px; }
+#dot-6 { left: 160px; }
+#dot-7 { left: 190px; }
+#dot-8 { left: 220px; }
+#dot-9 { left: 250px; }
+#dot-10 { left: 280px; }
+#dot-11 { left: 310px; }
+#dot-12 { left: 340px; }
+#dot-13 { left: 370px; }
+#dot-14 { left: 400px; }
+#dot-15 { left: 430px; }
+#dot-16 { left: 460px; }
+#dot-17 { left: 490px; }
+#dot-18 { left: 520px; }
+#dot-19 { left: 550px; }
+#dot-20 { left: 580px; }
+#dot-21 { left: 610px; }
+
+.question-bubble {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.character-icon-wrap {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.character-icon {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.bubble-text {
+    background-color: #a5d8ff;
+    padding: 10px 10px;
+    border: 2px solid #a5d8ff;
+    border-radius: 10px;
+    position: relative;
+    max-width: 500px;
+}
+
+.bubble-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right-color: #a5d8ff;
+}
+.question-child{
+	font-size: 16px;
+	display: block;
+}
+
+.question-exercise,
+.question-culture,
+.question-lifestyle,
+.question-hospital,
+.question-ocean,
+.question-pet,
+.question-bus,
+.question-lease,
+.question-residence,
+.question-cost,
+.question-security,
+.question-bath,
+.question-parcel,
+.question-alcohol,
+.question-cafe,
+.question-age,
+.question-car,
+.question-expressbus,
+.question-airplane,
+.question-train {
+    font-size: 16px;
+    display: none;
+}
+
+.answer-title {
+    margin: 100px 0 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+	display: none;
+}
+
+.answer-section {
+    background-color: #d3f0ff;
+    padding: 50px;
+    border-radius: 15px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.answer-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.answer-section.hide {
+    opacity: 0; 
+    transform: translateY(0);
+    transition: none; 
+}
+
+.answer-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.child-answer-btn,
+.exercise-answer-btn,
+.culture-answer-btn,
+.lifestyle-answer-btn,
+.hospital-answer-btn,
+.ocean-answer-btn,
+.pet-answer-btn,
+.bus-answer-btn,
+.lease-answer-btn,
+.residence-answer-btn,
+.cost-answer-btn,
+.security-answer-btn,
+.bath-answer-btn,
+.parcel-answer-btn,
+.alcohol-answer-btn,
+.cafe-answer-btn,
+.age-answer-btn,
+.car-answer-btn,
+.expressbus-answer-btn,
+.airplane-answer-btn,
+.train-answer-btn {
+    padding: 20px;
+    background-color: #a5d8ff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    word-break: keep-all;
+    max-width: 220px;
+}
+.lease-answer-btn{
+	z-index: 10;
+}
+
+.exercise-answer-btn,
+.culture-answer-btn,
+.lifestyle-answer-btn,
+.hospital-answer-btn,
+.ocean-answer-btn,
+.pet-answer-btn,
+.bus-answer-btn,
+.lease-answer-btn,
+.residence-answer-btn,
+.cost-answer-btn,
+.security-answer-btn,
+.bath-answer-btn,
+.parcel-answer-btn,
+.alcohol-answer-btn,
+.cafe-answer-btn,
+.age-answer-btn,
+.car-answer-btn,
+.expressbus-answer-btn,
+.airplane-answer-btn,
+.train-answer-btn {
+    display: none;
+}
+
+.child-answer-btn:hover,
+.exercise-answer-btn:hover,
+.culture-answer-btn:hover,
+.lifestyle-answer-btn:hover,
+.hospital-answer-btn:hover,
+.ocean-answer-btn:hover,
+.pet-answer-btn:hover,
+.bus-answer-btn:hover,
+.lease-answer-btn:hover,
+.residence-answer-btn:hover,
+.cost-answer-btn:hover,
+.security-answer-btn:hover,
+.bath-answer-btn:hover,
+.parcel-answer-btn:hover,
+.alcohol-answer-btn:hover,
+.cafe-answer-btn:hover,
+.age-answer-btn:hover,
+.car-answer-btn:hover,
+.expressbus-answer-btn:hover,
+.airplane-answer-btn:hover,
+.train-answer-btn:hover{
+    background-color: rgb(0,194, 255);
+}
+
+.fixed-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(0, 194, 255);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+}
+
+.button img {
+    width: 50px;
+    height: 50px;
+}
